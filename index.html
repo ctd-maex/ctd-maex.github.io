@@ -25,6 +25,20 @@
       user-select: none;
     }
 
+    .menu {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    flex-direction: row;
+    position: static;
+    display: flex;
+    background-color: transparent;
+    gap: 10px;
+    left: auto;
+    top: auto;
+    width: auto;
+  }
+
     .menu.open {
       opacity: 1;
       transform: translate(-50%, 0);
@@ -51,22 +65,10 @@
   header {
     display: flex;
     justify-content: center;
+
+    
   }
 
-  .menu {
-    opacity: 1 !important;
-    transform: none !important;
-    pointer-events: auto !important;
-    flex-direction: row;
-    position: static;
-    display: flex;
-    background-color: transparent;
-    gap: 10px;
-    left: auto;
-    top: auto;
-    width: auto;
-  }
-}
 
       .menu a {
         background-color: #000000;
@@ -79,6 +81,7 @@
       .menu-toggle {
         display: none;
       }
+    }
   </style>
 </head>
 <body>
