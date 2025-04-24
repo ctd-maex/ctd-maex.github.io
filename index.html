@@ -26,20 +26,25 @@
     }
 
     .menu {
-    opacity: 1 !important;
-    transform: none !important;
-    pointer-events: auto !important;
-    flex-direction: row;
-    position: static;
-    display: flex;
-    background-color: transparent;
-    gap: 10px;
-    left: auto;
-    top: auto;
-    width: auto;
-  }
+      display: none;
+      opacity: 0;
+      transform: translate(-50%, -20px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+      flex-direction: column;
+      background-color: #000000;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 8px;
+      overflow: hidden;
+      z-index: 10;
+    }
 
     .menu.open {
+      display: flex;
       opacity: 1;
       transform: translate(-50%, 0);
       pointer-events: auto;
@@ -62,18 +67,23 @@
     }
 
     @media (min-width: 600px) {
-  header {
-    display: flex;
-    justify-content: center;
-  }
-
-
-      .menu a {
-        background-color: #000000;
+      header {
+        display: flex;
+        justify-content: center;
       }
 
-      .menu a:hover {
-        background-color: #222;
+      .menu {
+        display: flex !important;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        gap: 10px;
+        left: auto;
+        top: auto;
+        width: auto;
       }
 
       .menu-toggle {
@@ -89,8 +99,8 @@
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav class="menu" id="dropdownMenu">
       <a href="events/index.html">Events</a>
-      <a href="#about">Comming soon - Über uns</a>
-      <a href="#contact">Comming soon - Kontakt</a>
+      <a href="#about">Coming soon - Über uns</a>
+      <a href="#contact">Coming soon - Kontakt</a>
     </nav>
   </header>
 
@@ -109,6 +119,7 @@
 
 </body>
 </html>
+
 
 
 <!--<!DOCTYPE html>
