@@ -1,97 +1,73 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <!-- Auch das meta-Tag zum Zeichensatz wurde vereinfacht.-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     
-    <style>
-        * {
-            color: #999999;
-            font-size: 20px;
-            font-weight: 400;
-            box-sizing: border-box;
-            font-family: 'Monteserat', Arial, sans-serif;
-        }
- 
-        header,
-        nav,
-        section,
-        aside,
-        footer {
-            text-align: center;
-            border-radius: 7px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,.08);
-        }
- 
-        header {
-            width: 25%;
-            margin: 25px 25px 25px 25px;
-            display: inline-block;
-        }
- 
-        nav {
-            width: calc(75% - 75px);
-            margin: 25px 25px 25px 0px;
-            float: right;
-        }
- 
-        aside {
-            width: 25%;
-            float: left;
-            min-height: 517px;
-        }
- 
-        section {
-            float: left;
-            width: calc(75% - 75px);
-            margin: 0 25px 25px 25px;
-        }
- 
-        section header,
-        section article,
-        section footer {
-            width: 100%;
-            border-radius: 7px;
-            border: 1px solid #e5e5e5;
-            box-shadow: none;
-            margin: 25px 0px 0px 0px;
-            padding: 50px;
-        }
- 
-        footer {
-            width: 96.5%;
-            margin: 25px 25px 0px 25px;
-            clear: both;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CTD-Vortuna Linz Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    .event {
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .event h2 {
+      margin-top: 0;
+    }
+    .event p {
+      margin: 5px 0;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #27ae60;
+      color: white;
+      text-decoration: none;
+      border-radius: 3px;
+      margin-top: 10px;
+    }
+    .button:hover {
+      background-color: #219150;
+    }
+  </style>
 </head>
 <body>
-<main>
   <header>
-    header <!-- Logo/Website-Name am besten als eine h1 nutzen-->
+    <h1>Test_1</h1>
+    <p>Test_2</p>
   </header>
- 
-  <nav>
-    nav <!-- Menü am besten als eine ul einfügen -->
-  </nav>
- 
-  <section>
-    section <!-- Ein Abschnitt der Website -->
-    <header>section header</header> <!-- Du Überschrift des Website-Abschnitts -->
-    <article>section article</article> <!-- Der Inhalt des Website-Abschnitts -->
-    <footer>section footer</footer> <!-- Der Schlussteil des Website-Abschnitts -->
-  </section>
- 
-  <aside>
-    aside <!-- Eine Seitenleiste -->
-  </aside>
- 
-  <footer>
-    footer <!-- Der Fußbereich -->
-  </footer>
-</main>   
+  <main>
+    <section class="event">
+      <h2>Test_3</h2>
+      <p><strong>Datum:</strong> DATE???</p>
+      <p><strong>Uhrzeit:</strong> TIME 00:00 - 00:00</p>
+      <p><strong>Preis:</strong> PRICE</p>
+      <a class="button" href="#">Jetzt Ticket buchen</a>
+    </section>
+    <section class="event">
+      <h2>Test_4</h2>
+      <p><strong>Datum:</strong> DATE_2???</p>
+      <p><strong>Uhrzeit:</strong> TIME_2 00:00 - 00:00</p>
+      <p><strong>Preis:</strong> PRICE_2</p>
+      <a class="button" href="#">Jetzt Ticket buchen</a>
+    </section>
+    <!-- Weitere Events können hier hinzugefügt werden -->
+  </main>
 </body>
 </html>
