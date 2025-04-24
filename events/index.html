@@ -27,13 +27,18 @@
     }
 
     .menu {
-      display: none;
+      opacity: 0;
+      transform: translate(-50%, -20px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+
       flex-direction: column;
-      background-color: #444;
+      background-color: #000000;
       position: absolute;
       top: 60px;
-      left: 20px;
-      right: 20px;
+      left: 50%;
+      width: 90%;
+      max-width: 600px;
       border-radius: 8px;
       overflow: hidden;
       z-index: 10;
@@ -85,7 +90,7 @@
     <header>
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <nav class="menu" id="dropdownMenu">
-        <a href="/index.html">Startseite</a>
+        <a href="/">Startseite</a>
         <a href="#about">Comming soon - Über uns</a>
         <a href="#contact">Comming soon - Kontakt</a>
       </nav>
