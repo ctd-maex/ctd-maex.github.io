@@ -2,21 +2,21 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CTD-Vortuna Linz Events</title>
-
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f9f9f9;
     }
 
     header {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
+      background-color: #000000;
+      color: #ffd700;
+      padding: 20px;
       position: relative;
+      text-align: center;
     }
 
     .menu-toggle {
@@ -24,14 +24,17 @@
       cursor: pointer;
       display: inline-block;
       user-select: none;
+      position: absolute;
+      top: 20px;
+      left: 20px;
     }
 
     .menu {
+      display: none;
       opacity: 0;
       transform: translate(-50%, -20px);
       transition: all 0.3s ease;
       pointer-events: none;
-
       flex-direction: column;
       background-color: #000000;
       position: absolute;
@@ -44,87 +47,45 @@
       z-index: 10;
     }
 
+    .menu.open {
+      display: flex;
+      opacity: 1;
+      transform: translate(-50%, 0);
+      pointer-events: auto;
+    }
+
     .menu a {
       padding: 15px;
       text-decoration: none;
       color: #ffd700;
       background-color: #000000;
-      border-bottom: 1px solid #666;
       text-align: center;
     }
 
     .menu a:hover {
-      background-color: #777;
+      background-color: #222;
     }
 
     main {
       padding: 20px;
     }
 
-    @media (min-width: 600px) {
-      .menu {
-        flex-direction: row;
-        position: static;
-        display: flex !important;
-        background-color: transparent;
-        gap: 10px;
-      }
-
-      .menu a {
-        border: none;
-        background-color: #333;
-      }
-
-      .menu a:hover {
-        background-color: #555;
-      }
-
-      .menu-toggle {
-        display: none;
-      }
-    }
-  </style>
-</head>
-  <body>
-
-    <header>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-      <nav class="menu" id="dropdownMenu">
-        <a href="/">Startseite</a>
-        <a href="#about">Comming soon - Über uns</a>
-        <a href="#contact">Comming soon - Kontakt</a>
-      </nav>
-    </header>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-    header {
-      background-color: #000000;
-      color: #ffd700;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      padding: 20px;
-    }
     .event {
       background-color: white;
       padding: 15px;
       margin-bottom: 15px;
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+
     .event h2 {
       margin-top: 0;
     }
+
     .event p {
       margin: 5px 0;
     }
+
     .button {
       display: inline-block;
       padding: 10px 15px;
@@ -134,16 +95,50 @@
       border-radius: 3px;
       margin-top: 10px;
     }
+
     .button:hover {
       background-color: #219150;
+    }
+
+    @media (min-width: 600px) {
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu {
+        display: flex !important;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        gap: 10px;
+        width: auto;
+        left: auto;
+        top: auto;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="menu" id="dropdownMenu">
+      <a href="/">Startseite</a>
+      <a href="#about">Coming soon - Über uns</a>
+      <a href="#contact">Coming soon - Kontakt</a>
+    </nav>
     <h1>CTD-Vortuna Events</h1>
     <p>Hier kannst du dich direkt bei unseren Rennen und Events eintragen.</p>
   </header>
+
   <main>
     <section class="event">
       <h2>Jesolo</h2>
@@ -152,6 +147,7 @@
       <p><strong>Preis:</strong> PRICE</p>
       <a class="button" href="#">Jetzt Ticket buchen</a>
     </section>
+
     <section class="event">
       <h2>Test_4</h2>
       <p><strong>Datum:</strong> DATE_2???</p>
@@ -159,16 +155,13 @@
       <p><strong>Preis:</strong> PRICE_2</p>
       <a class="button" href="#">Jetzt Ticket buchen</a>
     </section>
-    <!-- Weitere Events können hier hinzugefügt werden -->
   </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('open');
+    }
+  </script>
 </body>
-  
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById('dropdownMenu');
-        menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-      }
-    </script>
-  
-  </body>
 </html>
