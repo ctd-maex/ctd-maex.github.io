@@ -70,4 +70,30 @@
     <!-- Weitere Events können hier hinzugefügt werden -->
   </main>
 </body>
+
+<body>
+
+    <header>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav class="menu" id="dropdownMenu">
+        <a href="index.html">Startseite</a>
+        <a href="events/index.html">Events</a>
+        <a href="#about">Comming soon - Über uns</a>
+        <a href="#contact">Comming soon - Kontakt</a>
+      </nav>
+    </header>
+  
+    <main>
+      <h2>CTD Linz</h2>
+      <p>Dies ist eine Development Seite</p>
+    </main>
+  
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('dropdownMenu');
+        menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+      }
+    </script>
+  
+  </body>
 </html>
