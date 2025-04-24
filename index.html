@@ -25,24 +25,6 @@
       user-select: none;
     }
 
-    .menu {
-      opacity: 0;
-      transform: translate(-50%, -20px);
-      transition: all 0.3s ease;
-      pointer-events: none;
-
-      flex-direction: column;
-      background-color: #000000;
-      position: absolute;
-      top: 60px;
-      left: 50%;
-      width: 90%;
-      max-width: 600px;
-      border-radius: 8px;
-      overflow: hidden;
-      z-index: 10;
-    }
-
     .menu.open {
       opacity: 1;
       transform: translate(-50%, 0);
@@ -66,19 +48,25 @@
     }
 
     @media (min-width: 600px) {
-      .menu {
-        opacity: 1 !important;
-        transform: none !important;
-        pointer-events: auto !important;
-        flex-direction: row;
-        position: static;
-        display: flex;
-        background-color: transparent;
-        gap: 10px;
-        left: auto;
-        top: auto;
-        width: auto;
-      }
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    flex-direction: row;
+    position: static;
+    display: flex;
+    background-color: transparent;
+    gap: 10px;
+    left: auto;
+    top: auto;
+    width: auto;
+  }
+}
 
       .menu a {
         background-color: #000000;
@@ -91,7 +79,6 @@
       .menu-toggle {
         display: none;
       }
-    }
   </style>
 </head>
 <body>
