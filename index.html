@@ -1,15 +1,69 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8">
-    <title>TEST-SITE CTD</title>
-  </head>
-  <body>
-    <h1>DIES IST EINE TESTSEITE</h1>
-    <nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTD Developement Site</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      padding: 20px;
+      background-color: #444;
+    }
+
+    .menu a {
+      display: block;
+      background-color: #666;
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu a:hover {
+      background-color: #888;
+    }
+
+    main {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CTD Linz</h1>
+    <div class="menu">
       <ul>
-        <li><a href="events/index.html">Zur Eventseite</a></li>
-      </ul>
-    </nav>
-  </body>
+      <li><a href="index.html">Startseite</a></li>
+      <!--li><a href="#about">Über uns</a></li-->
+      <li><a href="events/index.html">Events</a></li>
+      <!--a href="#contact">Kontakt</a-->
+    </ul>
+    </div>
+  </header>
+
+  <main>
+    <h2>Test</h2>
+    <p>CTD Vortuna - Development Seite</p>
+  </main>
+
+</body>
 </html>
